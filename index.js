@@ -31,18 +31,15 @@ if (SUPPORTS_MEDIA_DEVICES) {
 
         //let there be light!
         const btn = document.querySelector('.switch');
-        btn.addEventListener('click', function(){
+        // btn.addEventListener('click', function(){
           track.applyConstraints({
             advanced: [{torch: true}]
           });
-        });
+        // });
       });
     });
   });
-  
   //The light will be on as long the track exists
-  
-  
 }
 
 
