@@ -1,7 +1,8 @@
-const medias = {
-  audio : false,
-  video : true
-};
+const medias = {audio : false, video : {
+  facingMode : {
+    exact : "environment"
+  }
+}},
 const video = document.getElementById("video");
 const promise = navigator.mediaDevices.getUserMedia(medias);
 
@@ -10,6 +11,7 @@ promise.then(successCallback)
 
 function successCallback(stream) {
   video.srcObject = stream;
+  video.style.visibility="visible";
 };
 
 function errorCallback(err) {
