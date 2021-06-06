@@ -12,7 +12,7 @@ promise.then(successCallback)
 
 function successCallback(stream) {
   video.srcObject = stream;
-  video.style.visibility="visible";
+  requestAnimationFrame(draw);
   // while(true){
   //   video.style.visibility="hidden";
   //   await _sleep(10);
@@ -24,3 +24,13 @@ function successCallback(stream) {
 function errorCallback(err) {
   alert(err);
 };
+
+function draw() {
+  video.style.visibility="visible";
+  // video.style.visibility="hidden";
+  //   await _sleep(10);
+  //   video.style.visibility="visible";
+  //   await _sleep(10);
+
+  requestAnimationFrame(draw);
+}
