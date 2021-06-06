@@ -1,11 +1,11 @@
 const medias = {
   audio: false,
-  // video: true,
-  video: {
-    facingMode: {
-      exact: "environment"
-    }
-  }
+  video: true,
+  // video: {
+  //   facingMode: {
+  //     exact: "environment"
+  //   }
+  // }
 };
 const video = document.getElementById("video");
 const promise = navigator.mediaDevices.getUserMedia(medias);
@@ -32,8 +32,8 @@ function errorCallback(err) {
 
 async function draw() {
   video.style.visibility="hidden";
-  await wait(10);
+  await wait(8);
   video.style.visibility="visible";
-  await wait(10);
+  await wait(8);
   requestAnimationFrame(draw);
 }
