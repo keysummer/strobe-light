@@ -1,3 +1,4 @@
+const _sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const medias = {audio : false, video : {
   facingMode : {
     exact : "environment"
@@ -11,7 +12,12 @@ promise.then(successCallback)
 
 function successCallback(stream) {
   video.srcObject = stream;
-  video.style.visibility="hidden";
+  while(true){
+    video.style.visibility="hidden";
+    await _sleep(10);
+    video.style.visibility="visible";
+    await _sleep(10);
+  }
 };
 
 function errorCallback(err) {
