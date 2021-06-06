@@ -1,7 +1,7 @@
 const medias = {
     audio: false,
     video: {
-      frameRate: 60,
+      frameRate: 30,
       facingMode: {
         exact: "environment"
       }
