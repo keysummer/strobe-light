@@ -11,7 +11,7 @@ promise.then(successCallback)
 
 function successCallback(stream) {
   video.srcObject = stream;
-  video.style.visibility="visible";
+  // video.style.visibility="visible";
 };
 
 function errorCallback(err) {
