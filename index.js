@@ -1,11 +1,11 @@
 const medias = {
   audio: false,
-  // video: true
-  video: {
-    facingMode: {
-      exact: "environment"
-    }
-  }
+  video: true
+  // video: {
+  //   facingMode: {
+  //     exact: "environment"
+  //   }
+  // }
 };
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
@@ -25,7 +25,7 @@ function errorCallback(err) {
   alert(err);
 }
 
-var fps = 10;
+var fps = 30;
 
 function draw() {
   setTimeout(function() {
