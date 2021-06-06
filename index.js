@@ -32,8 +32,8 @@ function errorCallback(err) {
 
 async function draw() {
   video.style.visibility="hidden";
-  await wait(100);
+  await wait(1);
   video.style.visibility="visible";
-  await wait(100);
+  await wait(1);
   requestAnimationFrame(draw);
 }
