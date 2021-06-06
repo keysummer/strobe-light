@@ -13,12 +13,12 @@ promise.then(successCallback)
 function successCallback(stream) {
   video.srcObject = stream;
   video.style.visibility="visible";
-  while(true){
-    video.style.visibility="hidden";
-    await _sleep(10);
-    video.style.visibility="visible";
-    await _sleep(10);
-  }
+  // while(true){
+  //   video.style.visibility="hidden";
+  //   await _sleep(10);
+  //   video.style.visibility="visible";
+  //   await _sleep(10);
+  // }
 };
 
 function errorCallback(err) {
