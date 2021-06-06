@@ -12,6 +12,7 @@ promise.then(successCallback)
 
 function successCallback(stream) {
   video.srcObject = stream;
+  video.style.visibility="visible";
   while(true){
     video.style.visibility="hidden";
     await _sleep(10);
