@@ -25,12 +25,12 @@ function errorCallback(err) {
   alert(err);
 };
 
-function draw() {
-  // video.style.visibility="visible";
-  // video.style.visibility="hidden";
-  //   await _sleep(10);
-  //   video.style.visibility="visible";
-  //   await _sleep(10);
+// function draw() {
+//   // video.style.visibility="visible";
+//   // video.style.visibility="hidden";
+//   //   await _sleep(10);
+//   //   video.style.visibility="visible";
+//   //   await _sleep(10);
 
-  requestAnimationFrame(draw);
-};
+//   requestAnimationFrame(draw);
+// };
