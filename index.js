@@ -31,7 +31,8 @@ const medias = {
   function draw() {
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
-    ctx.drawImage(video, 0, 0);
+    // ctx.drawImage(video, 0, 0);
+    ctx.fillStyle = 'rgb(255,0,255)';
   
     requestAnimationFrame(draw);
   }
