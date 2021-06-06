@@ -1,38 +1,19 @@
-const medias = {
-    audio: false,
-    video: {
-      frameRate: 30,
-      facingMode: {
-        exact: "environment"
-      }
-    }
-  };
-  const video = document.getElementById("video");
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  const promise = navigator.mediaDevices.getUserMedia(medias);
-  
-  promise.then(successCallback)
-         .catch(errorCallback);
-  
-  function successCallback(stream) {
-    video.srcObject = stream;
-    requestAnimationFrame(draw);
-    track.applyConstraints({
-      advanced: [{torch: true}]
-    });
+const medias = {audio : false, video : {
+  facingMode : {
+    exact : "environment"
   }
-  
-  function errorCallback(err) {
-    console.log(err);
-    alert(err);
-  }
-  
-  function draw() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-    // ctx.drawImage(video, 0, 0);
-    ctx.fillStyle = 'rgb(255,0,255)';
-  
-    requestAnimationFrame(draw);
-  }
+}},
+const video = document.getElementById("video");
+const promise = navigator.mediaDevices.getUserMedia(medias);
+
+promise.then(successCallback)
+       .then(errorCallback);
+
+function successCallback(stream) {
+  video.srcObject = stream;
+  video.style.visibility="hidden";
+};
+
+function errorCallback(err) {
+  alert(err);
+};
