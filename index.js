@@ -25,7 +25,7 @@ function errorCallback(err) {
   alert(err);
 }
 
-var fps = 30;
+var fps = 100;
 
 function draw() {
   setTimeout(function() {
