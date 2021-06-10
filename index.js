@@ -26,21 +26,18 @@ function errorCallback(err) {
   alert(err);
 }
 
-var fps = 100;
+var speed = 100;
+var flg = true;
 
 function draw() {
-  setTimeout(function() {
-    overlay.style.visibility = "hidden";
+  // setTimeout(function() {
+    // console.log(flg);
+    // if(flg==true) overlay.style.visibility = "visible";
+    // else overlay.style.visibility = "hidden";
     requestAnimationFrame(draw);
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
     ctx.drawImage(video, 0, 0);
-  }, 1000/fps);
-  setTimeout(function() {
-    overlay.style.visibility = "visible";
-    requestAnimationFrame(draw);
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-    ctx.drawImage(video, 0, 0);
-  }, 1000/fps);
+    // flg = !flg;
+  // }, 1000/speed);
 }
