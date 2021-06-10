@@ -3,7 +3,7 @@ const medias = {
   // video : true //フロントカメラ
   video : { //リアカメラ
     facingMode : {exact:"environment"},
-    frameRate : {ideal:30,max:40}
+    frameRate : {ideal:120,max:120}
   }
 };
 
