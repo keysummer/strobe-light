@@ -1,9 +1,9 @@
-const medias = {audio : false,
-  // video : true
-  video : {
-    facingMode : {
-      exact : "environment"
-    }
+const medias = {
+  audio : false,
+  // video : true //フロントカメラ
+  video : { //リアカメラ
+    facingMode : {exact:"environment"},
+    frameRate : {ideal:30,max:40}
   }
 };
 
