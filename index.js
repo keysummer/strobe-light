@@ -1,12 +1,13 @@
 const medias = {
   audio : false,
   video : {
-    // facingMode : "user", //フロントカメラ
-    facingMode : {exact:"environment"}, //リアカメラ
+    facingMode : "user", //フロントカメラ
+    // facingMode : {exact:"environment"}, //リアカメラ
     frameRate : {ideal:60,max:60}
   }
 };
 
+const overlay = document.getElementById("overlay");
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -25,13 +26,21 @@ function errorCallback(err) {
   alert(err);
 }
 
-var fps = 10;
+var fps = 100;
 
 function draw() {
-  // setTimeout(function() {
+  setTimeout(function() {
+    overlay.style.visibility = "hidden";
     requestAnimationFrame(draw);
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
     ctx.drawImage(video, 0, 0);
-  // }, 1000/fps);
+  }, 1000/fps);
+  setTimeout(function() {
+    overlay.style.visibility = "visible";
+    requestAnimationFrame(draw);
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.drawImage(video, 0, 0);
+  }, 1000/fps);
 }
