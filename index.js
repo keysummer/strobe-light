@@ -1,9 +1,9 @@
 const medias = {
   audio : false,
-  // video : true //フロントカメラ
-  video : { //リアカメラ
-    facingMode : {exact:"environment"},
-    frameRate : {ideal:120,max:120}
+  video : {
+    // facingMode : "user", //フロントカメラ
+    facingMode : {exact:"environment"}, //リアカメラ
+    frameRate : {ideal:60,max:60}
   }
 };
 
@@ -28,10 +28,10 @@ function errorCallback(err) {
 var fps = 10;
 
 function draw() {
-  setTimeout(function() {
+  // setTimeout(function() {
     requestAnimationFrame(draw);
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
     ctx.drawImage(video, 0, 0);
-  }, 1000/fps);
+  // }, 1000/fps);
 }
