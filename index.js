@@ -1,9 +1,15 @@
 const medias = {
   audio : false,
   video : {
-    // facingMode : "user", //フロントカメラ
-    facingMode : {exact:"environment"}, //リアカメラ
-    frameRate : {ideal:240,max:240}
+    facingMode : "user", //フロントカメラ
+    // facingMode : {exact:"environment"}, //リアカメラ
+    frameRate : {ideal:200}
+  },
+  image : {
+    exposureMode : "single-shot",
+    exposureCompensation : {ideal:3},
+    iso : {ideal:1000},
+    torch : 1
   }
 };
 
@@ -26,8 +32,8 @@ function errorCallback(err) {
   alert(err);
 }
 
-var speed = 100;
-var flg = true;
+// var speed = 100;
+// var flg = true;
 
 function draw() {
   // setTimeout(function() {
