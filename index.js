@@ -8,7 +8,7 @@ const medias = {
   image : {
     exposureMode : "none",
     exposureCompensation : {ideal:3},
-    iso : {ideal:100}
+    iso : {ideal:1000}
     // torch : 1
   }
 };
