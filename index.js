@@ -3,14 +3,17 @@ const medias = {
   video : {
     // facingMode : {ideal:"user"}, //フロントカメラ
     facingMode : {ideal:"environment"}, //リアカメラ
-    frameRate : {ideal:1000}
-  },
-  image : {
-    exposureMode : "none",
+    frameRate : {ideal:240},
+    exposureMode : "manual",
     exposureCompensation : {ideal:3},
-    iso : {ideal:1000}
-    // torch : 1
+    iso : {ideal:10}
   }
+  // image : {
+  //   exposureMode : "none",
+  //   exposureCompensation : {ideal:3},
+  //   iso : {ideal:1000}
+  //   // torch : 1
+  // }
 };
 
 const overlay = document.getElementById("overlay");
